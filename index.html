@@ -1,1 +1,582 @@
-https://gensparkpublicblob.blob.core.windows.net/user-upload-image/page/tooluse_F9ykkq4-RhyZiEIHnf6LMA/crossfit_otsuka_final.html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossFit Otsuka - 大塚駅前の本格クロスフィットジム | 月5回18,000円～</title>
+    <meta name="description" content="大塚駅近くの本格クロスフィットジム。北大塚1-33-22の好立地でセミパーソナル制。月5回18,000円から。無料体験実施中。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff6b35;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #ff6b35;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23222" width="1200" height="800"/><text x="600" y="400" text-anchor="middle" fill="%23666" font-size="48" font-family="Arial">CrossFit Otsuka</text></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .problems {
+            background-color: #f8f9fa;
+        }
+        
+        .problem-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .problem-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .problem-item h3 {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+        
+        .classes {
+            background-color: #f8f9fa;
+        }
+        
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .class-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .class-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .class-image {
+            height: 200px;
+            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .class-content {
+            padding: 2rem;
+        }
+        
+        .pricing {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            color: white;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            color: #333;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #ff6b35;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured::before {
+            content: "おすすめ";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6b35;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin: 1rem 0;
+        }
+        
+        .price-unit {
+            font-size: 1rem;
+            color: #666;
+        }
+        
+        .schedule {
+            background-color: #f8f9fa;
+        }
+        
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .schedule-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #ff6b35;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .mobile-menu {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">CrossFit Otsuka</div>
+            <ul class="nav-links">
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#about">クロスフィットとは</a></li>
+                <li><a href="#classes">クラス</a></li>
+                <li><a href="#pricing">料金</a></li>
+                <li><a href="#contact">アクセス</a></li>
+            </ul>
+            <div class="mobile-menu">☰</div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>CrossFit Otsuka</h1>
+            <p>大塚で本格的なクロスフィットを体験しよう</p>
+            <a href="https://crossfit-otsuka.hacomono.jp/home" class="cta-button">無料体験予約</a>
+        </div>
+    </section>
+
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-title">ジム通いについて<br>こんなお悩みありませんか？</h2>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <h3>🏋️‍♂️ 続かない</h3>
+                    <p>普通のジムや24時間ジムは続くかわからない</p>
+                </div>
+                <div class="problem-item">
+                    <h3>😴 つまらない</h3>
+                    <p>毎回同じマシンを回るだけで楽しくない</p>
+                </div>
+                <div class="problem-item">
+                    <h3>❓ わからない</h3>
+                    <p>何をすればいいのかわからない</p>
+                </div>
+                <div class="problem-item">
+                    <h3>📉 モチベーション</h3>
+                    <p>モチベーションが上がらない</p>
+                </div>
+                <div class="problem-item">
+                    <h3>🏃‍♂️ 一人では...</h3>
+                    <p>一人ではできない</p>
+                </div>
+                <div class="problem-item">
+                    <h3>💰 高い</h3>
+                    <p>パーソナルは高い...</p>
+                </div>
+            </div>
+            <div style="text-align: center; padding: 2rem; background: white; border-radius: 15px; margin-top: 2rem;">
+                <p style="font-size: 1.2rem; color: #ff6b35; font-weight: bold;">一般的なジムでは半年継続率が30%ほどで、1年続けられる人はたったの4%と言われています。</p>
+                <p style="margin-top: 1rem;">それは、何をしたらいいのか分からなかったり、モチベーションが上がらず、効果を実感できない。<br><strong>そんな一般的なジムの仕組みに問題があるだけで、あなたのせいではありません。</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">クロスフィットが<br>そのようなお悩み解決できます</h2>
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <p style="font-size: 1.3rem; color: #ff6b35; font-weight: bold;">1クラス8人の少人数クラスのセミパーソナル制で、メニューとコーチの指導付きなのに1回3,600円〜通えてコスパも最高。</p>
+                <p style="margin-top: 1rem;">毎回違う、他のジムでは出来ないトレーニングで理想的なカラダになれて運動の習慣化が可能です。</p>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">💪</div>
+                    <h3>しなやかで動けるカラダ</h3>
+                    <p>機能的な動きを重視したトレーニングで、日常生活に活かせる身体能力を向上させます。</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>効率的な動作習得</h3>
+                    <p>正しい動作を覚えて日常生活が楽になる効率的なトレーニング方法を指導します。</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👥</div>
+                    <h3>仲間と一緒に楽しく</h3>
+                    <p>みんなで頑張るから楽しい！同じ価値観を持ったメンバー様で居心地がいい環境です。</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>毎回違うトレーニング</h3>
+                    <p>毎回違うトレーニングで飽きない！常に新しい刺激で成長を実感できます。</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 15px;">
+                <h3 style="color: #ff6b35; margin-bottom: 1rem;">「もっと早くに始めたかった！」</h3>
+                <h2 style="margin-bottom: 1rem;">クロスフィットとは？</h2>
+                <p style="font-size: 1.1rem;">CrossFitは、日常生活で行う動作（歩く・走る・起き上がる・拾う・持ち上げる・押す・引く・跳ぶなど）をベースとした動きを高い強度で行い、全身を満遍なくトレーニングできるプログラムです。</p>
+                <p style="margin-top: 1rem;">1クラス8人制ながら、強度や動作は一人ひとりに合わせるのでジムに通ったことがない運動初心者の方からアスリートの方まで一緒に楽しくトレーニングを行います。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="classes" class="classes">
+        <div class="container">
+            <h2 class="section-title">クラス紹介</h2>
+            <div class="class-grid">
+                <div class="class-item">
+                    <div class="class-image">CrossFit Class</div>
+                    <div class="class-content">
+                        <h3>CrossFit Class</h3>
+                        <p>メインのクラスで、1回60分で毎日違うメニューでコーチ・メンバーと一緒にトレーニングしていきます。1クラス最大8名でワークアウトを行います。</p>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-image">HYROX Class</div>
+                    <div class="class-content">
+                        <h3>HYROX Class</h3>
+                        <p>世界を中心に盛り上がっているランニングとファンクショナルワークアウトを組み合わせた新しいフィットネスレース「HYROX」専用のクラスです。</p>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-image">Open Gym</div>
+                    <div class="class-content">
+                        <h3>Open Gym</h3>
+                        <p>ジムを自由に使うクラスです。習得したい動作の練習や、筋トレなど行うことが可能です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">料金プラン</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">メニュー付き、コーチの指導付きですのでパーソナルトレーニングに比べるとかなりお得です。</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>月5回</h3>
+                    <div class="price">¥18,000<span class="price-unit">/月</span></div>
+                    <p style="color: #666;">1回あたり ¥3,600</p>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li>月5回利用可能</li>
+                        <li>取り敢えず始めたい方向け</li>
+                        <li>遠方からお越しの方向け</li>
+                    </ul>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>月8回</h3>
+                    <div class="price">¥23,000<span class="price-unit">/月</span></div>
+                    <p style="color: #666;">1回あたり ¥2,875</p>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li>月8回利用可能</li>
+                        <li>習慣化を始めるコース</li>
+                        <li>週2回で効果的に</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>月12回</h3>
+                    <div class="price">¥27,000<span class="price-unit">/月</span></div>
+                    <p style="color: #666;">1回あたり ¥2,250</p>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li>月12回利用可能</li>
+                        <li>コンスタントに通いたい方</li>
+                        <li>身体能力向上を実感</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>月20回</h3>
+                    <div class="price">¥33,000<span class="price-unit">/月</span></div>
+                    <p style="color: #666;">1回あたり ¥1,650</p>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li>月20回利用可能</li>
+                        <li>積極的にライフスタイルに組み込み</li>
+                        <li>最もコストパフォーマンスが高い</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="schedule">
+        <div class="container">
+            <h2 class="section-title">営業時間</h2>
+            <div class="schedule-grid">
+                <div class="schedule-item">
+                    <h3>平日</h3>
+                    <p>6:30 - 21:30</p>
+                </div>
+                <div class="schedule-item">
+                    <h3>土日</h3>
+                    <p>8:00 - 13:30</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: white; border-radius: 15px;">
+                <h3 style="color: #ff6b35; margin-bottom: 1rem;">クラスの流れ</h3>
+                <p>ウォーミングアップからクールダウンまで1時間と短時間で効果のあるトレーニングを行います。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">無料体験実施中</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">もうちょっと痩せてから...もうちょっと鍛えてから...と思っていませんか？<br>ご自身で変わるのはなかなか難しいので、ぜひ今のままお越しください！</p>
+            <a href="https://crossfit-otsuka.hacomono.jp/home" class="cta-button" style="font-size: 1.5rem; padding: 20px 50px;">今すぐ予約する</a>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📍 住所</h3>
+                    <p>東京都豊島区北大塚1-33-22<br>大塚ダンス会館横のマンション</p>
+                </div>
+                <div class="contact-item">
+                    <h3>🚇 アクセス</h3>
+                    <p>JR大塚駅より徒歩5分<br>都電荒川線 大塚駅前駅より徒歩3分</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📧 予約・お問い合わせ</h3>
+                    <p><a href="https://crossfit-otsuka.hacomono.jp/home" style="color: white; text-decoration: underline;">オンライン予約システム</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CrossFit Otsuka. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // モバイルメニュー
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
